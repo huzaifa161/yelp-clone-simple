@@ -1,38 +1,159 @@
+*, *::before, *::after{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+html{
+    height:100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#root{
+    height:100%;
+}
+
 .App {
-  text-align: center;
+    height: 100%;
+    width: 720px;
+    margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* HEADER */
+
+.header{
+    font-size: 32px;
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+.card{
+    width: 200px;
+    margin: 20px 0;
+    transition: all .3s ease-in-out;
+}
+.card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+.card__header{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: #1976d2;
+    color: white;
+}
+.card__header--rating{
+    color: #fbc02d;
+}
+.card__review{
+    padding: 8px;
+    min-height: 60px;
+    background-color: #2196f3;
+    color: white;
+    font-size: 15px;
+}
+.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 1;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+.row__vertical{
+    flex-direction: column;
+    margin-top: 30px;
+}
+.col-1{
+    width: 100%;
+}
+.col-3{
+    width: 31%;
+}
+.col-2{
+    width: 48%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.col select,.col .form-control{
+    width: 100%;
+    padding: 7px 16px;
+}
+.form-control{
+    padding: 8px 16px;
+    border:none;
+    border-bottom:1px solid black;
+}
+.form-control:focus{
+    border-bottom: 2px solid #1976d2;
+    outline: none;
+}
+.row__vertical .col {
+    width: 80%;
+    margin: 20px auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.row__vertical  .form-control {
+    width: 100%;
+    margin: auto;
+}
+.row__vertical .add-button {
+    width: 100%;
+    margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.add-button{
+    padding: 8px 16px;
+    border:none;
+    margin-left: 12px;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 4px;
+}
+.add-button:hover{
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* RESTAURANT LIST*/
+.table{
+    border-collapse: collapse;
+    margin: 30px auto;
+    min-width: 720px;
+    border: 1px solid black;
+}
+.table thead{
+    background-color: #1e88e5;
+    color: white;
+}
+.table td, .table th{
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.table tbody{
+    color: #616161;
+    font-size: 15px;
+}
+tbody tr{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.button{
+    padding: 6px 16px;
+    border:none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    transition: all .3s ease-in-out;
+}
+.button:hover{
+    cursor: pointer;
+    transform: translateY(-1px);
+}
+.button:focus{
+    outline: none;
+}
+.button__edit{
+    background-color: #ef6c00;
+    color:white;
+}
+.button__delete{
+    background-color:#f44336;
+    color: white;
 }
